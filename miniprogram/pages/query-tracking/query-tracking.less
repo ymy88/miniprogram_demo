@@ -1,42 +1,52 @@
-.btn {
-  padding: 16rpx 80rpx;
-  font-size: 28rpx;
-  align-self: flex-start;
-  background-color: white;
-  color: #2c2c2c;
-  border-radius: 8rpx;
-  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-}
-
-.hover-btn {
-  opacity: 0.8;
-}
-
-.primary-btn {
-  .btn();
-  background-color: #2fb7ec;
-  color: white;
-}
-
 .container {
   padding: 10rpx;
   margin: 0;
 
+  .space {
+    margin-top: 80rpx;
+  }
+  .small-space {
+    margin-top: 20rpx;
+  }
+
+  .title {
+    .space();
+    font-size: 72rpx;
+  }
+
   .content {
+    margin-top: 40rpx;
+    height: 100%;
+    background-color: white;
     padding: 0 70rpx;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
   
-    .title {
-      margin-top: 120rpx;
-      font-size: 72rpx;
-    }
-  
     .desc {
-      margin-top: 96rpx;
+      .space();
       font-size: 40rpx;
+    }
+
+    .textarea {
+      .space();
+      padding: 16rpx;
+      background-color: #192a320d;
+    }
+
+    .flex-left {
+      align-self: flex-start;
+    }
+
+    .btn-query {
+      .flex-left();
+      .space();
+    }
+
+    .btn-clear {
+      .flex-left();
+      .small-space();
     }
   
   }
