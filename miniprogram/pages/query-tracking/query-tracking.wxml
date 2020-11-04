@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="content">
+    <text class="title">查询订单</text>
+
+    <text class="desc">请在以下框内输入物流单号，最多同时查询20个，以回车键隔开</text>
+
+    <my-button class="primary-btn" hover-class="hover-btn">
+      查询订单
+    </my-button>
+
+    <button class="btn" hover-class="hover-btn">
+      清空输入框
+    </button>
+  </view>
+</view>

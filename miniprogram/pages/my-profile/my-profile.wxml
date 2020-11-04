@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view>
+  <view class="page__hd">
+    <view class="page__title">账户信息</view>
+    <view class="page__desc">WishPost账户信息</view>
+  </view>
+  <view class="page__bd">
+    <mp-cells wx:if="{{ appUserInfoItems.length > 0 }}" ext-class="my-cells">
+      <mp-cell wx:for="{{ appUserInfoItems }}" wx:for-item="infoItem" wx:key="key">
+        <view>{{ infoItem.key }}</view>
+        <view slot="footer">{{ infoItem.value }}</view>
+      </mp-cell>
+    </mp-cells>
+  </view>
+</view>
