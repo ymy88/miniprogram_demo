@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<view class="root">
 
   <view class="header-bar">
     <view class="logo"></view>

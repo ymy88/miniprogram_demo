@@ -8,6 +8,7 @@
   "libVersion": "2.13.1",
   "projectname": "wx_mini_program",
   "scripts": {
+    "beforeCompile": "",
     "beforePreview": "sh preprocess.sh",
     "beforeUpload": "sh preprocess.sh"
   },

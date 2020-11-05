@@ -20,15 +20,12 @@ Page<PageDataProps, PageCustom>({
     fields: ["appUserInfo"],
   },
 
-  onLoad() {
-    // store binding 不会立即生效
-    wx.nextTick(() => {
-      if (!this.data.appUserInfo || !this.data.appUserInfo.wishpostId) {
-        wx.navigateTo({
-          url: "../login/login"
-        })
-      }
-    })
+  onShow() {
+    if (!this.data.appUserInfo || !this.data.appUserInfo.wishpostId) {
+      wx.navigateTo({
+        url: "../login/login"
+      })
+    }
   },
 
   computed: {
