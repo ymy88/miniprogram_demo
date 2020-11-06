@@ -3,6 +3,7 @@ type ComponentProperty = WechatMiniprogram.Component.PropertyOption;
 type ComponentMethod = WechatMiniprogram.Component.MethodOption;
 type PageData = WechatMiniprogram.Page.DataOption;
 type PageCustom = WechatMiniprogram.Page.CustomOption;
+type WxUserInfo = WechatMiniprogram.UserInfo;
 
 type APIReqBase = Record<string, any> | {}
 
@@ -25,7 +26,6 @@ interface AppUserInfo {
   readonly wishpostId?: string,
   readonly merchantId?: string
 }
-
 
 // IAction copied from miniprogram/node_modules/mobx-miniprogram/lib/core/action.d.ts
 interface IAction {
