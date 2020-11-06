@@ -23,7 +23,7 @@
 
     <text class="desc">WishPost是Wish平台唯一认可的中国大陆地区直发物流平台，Wish与多家优质物流商合作推出的跨境电商物流产品，为Wish商户提供下单、揽收、配送、跟踪查询等服务。 </text>
 
-    <navigator class="query-button" url="../query-tracking/query-tracking">
+    <navigator class="primary-btn query-button" url="../query-tracking/query-tracking">
       查询订单
     </navigator>
   </view>

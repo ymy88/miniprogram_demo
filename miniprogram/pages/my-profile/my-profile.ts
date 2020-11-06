@@ -1,13 +1,14 @@
-import { userStore, UserStoreData } from "../../stores/userstore";
+import { userStore, UserStoreData, UserStoreActions } from "../../stores/userstore";
 // @ts-ignore
 import { storeBindingsBehavior } from 'mobx-miniprogram-bindings'
 
 // Have to use "require" here
 const computedBehavior = require("miniprogram-computed");
 
-type PageDataProps = UserStoreData & {}
+type PageDataProps = UserStoreData;
+type PageMethods = PageCustom & UserStoreActions;
 
-Page<PageDataProps, PageCustom>({
+Page<PageDataProps, PageMethods>({
   behaviors: [storeBindingsBehavior, computedBehavior],
 
   data: {
@@ -18,14 +19,7 @@ Page<PageDataProps, PageCustom>({
   storeBindings: {
     store: userStore,
     fields: ["appUserInfo"],
-  },
-
-  onShow() {
-    if (!this.data.appUserInfo || !this.data.appUserInfo.wishpostId) {
-      wx.navigateTo({
-        url: "../login/login"
-      })
-    }
+    actions: ["clearAppUserInfo"]
   },
 
   computed: {
@@ -41,6 +35,13 @@ Page<PageDataProps, PageCustom>({
         { key: "WishPost ID", value: data.appUserInfo.wishpostId},
         { key: "Merchant ID", value: data.appUserInfo.merchantId}
       ]
+    }
+  },
+
+  logout() {
+    wx.removeStorageSync("userToken");
+    if (this.clearAppUserInfo) {
+      this.clearAppUserInfo()
     }
   }
 })

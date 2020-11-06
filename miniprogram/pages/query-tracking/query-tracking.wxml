@@ -1,17 +1,34 @@
-<view class="container">
+<view class="root">
   <text class="title">查询订单</text>
 
-  <view class="content">
-
+  <view class="card v-space">
     <text class="desc">请在以下框内输入物流单号，最多同时查询20个，以回车键隔开</text>
 
-    <textarea class=".textarea"></textarea>
-    <button class="primary-btn btn-query" hover-class="hover-btn">
-      查询订单
-    </button>
+    <textarea bindinput="doNothing" class="textarea" model:value="{{ rawTrackingNumbers }}"></textarea>
 
-    <button class="btn btn-clear" hover-class="hover-btn">
-      清空输入框
-    </button>
+    <view class="button-group">
+      <button class="primary-btn action-btn" hover-class="hover-btn" bindtap="handleSubmit">
+        查询订单
+      </button>
+
+      <button class="btn action-btn" hover-class="hover-btn" bindtap="clearInput">
+        清空输入框
+      </button>
+    </view>
   </view>
+
+  <view wx:if="{{ trackingInfo && trackingInfo.length > 0 }}" class="content">
+    <text class="desc">以下是mock数据，不要在意细节</text>
+    <view class="tracking-block">
+      <block wx:for="{{ trackingInfo }}" wx:key="trackingNumber">
+        <view class="tracking-number-bar">
+          {{ item.trackingNumber }}
+        </view>
+        <view class="tracking-location-bar">
+          {{ item.currentLocation }}
+        </view>
+      </block>
+    </view>
+  </view>
+
 </view>

@@ -1,86 +1,85 @@
-.root {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-
-  .header-bar {
-    width: 100%;
-    left: 0px;
-    right: 0px;
-    position: fixed;
-    z-index: 10;
-    display: flex;
-    flex-direction: row;
-    padding: 24rpx 80rpx;
-    justify-content: space-between;
-    align-items: stretch;
-    box-sizing: border-box;
-
-    .logo {
-      width: 237.82rpx;
-      height: 94rpx;
-      background-image: url("https://www.wishpost.cn/static/dist/wishpost_logo.gif?4db923a81850c39ea2b1e411289327c0");
-      background-position: 50%;
-      background-size: cover;
-    }
-
-    .right {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      align-items: center;
-    }
-
-    .icon-button {
-      padding: 10rpx 18rpx;
-      margin: 0;
-      width: unset !important;
-      height: 60rpx !important;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .option-button {
-      border: 1px black solid;
-      border-radius: 8rpx;
-    }
-    .lang-button {
-      margin-left: 10rpx;
-      font-size: 28rpx;
-    }
-  }
-
-  .content {
-    padding: 0 70rpx;
+.mixin() {
+  .root {
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-start;
 
-    .title {
-      margin-top: 220rpx;
-      font-size: 72rpx;
+    .header-bar {
+      width: 100%;
+      left: 0px;
+      right: 0px;
+      position: fixed;
+      z-index: 10;
+      display: flex;
+      flex-direction: row;
+      padding: 24rpx 80rpx;
+      justify-content: space-between;
+      align-items: stretch;
+      box-sizing: border-box;
+
+      .logo {
+        width: 237.82rpx;
+        height: 94rpx;
+        background-image: url("https://www.wishpost.cn/static/dist/wishpost_logo.gif?4db923a81850c39ea2b1e411289327c0");
+        background-position: 50%;
+        background-size: cover;
+      }
+
+      .right {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .icon-button {
+        padding: 10rpx 18rpx;
+        margin: 0;
+        width: unset;
+        height: 60rpx;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .option-button {
+        border: 1px black solid;
+        border-radius: 8rpx;
+      }
+      .lang-button {
+        margin-left: 10rpx;
+        font-size: 28rpx;
+      }
     }
 
-    .desc {
-      margin-top: 96rpx;
-      font-size: 40rpx;
-    }
+    .content {
+      padding: 0 70rpx;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
 
-    .query-button {
-      margin: 96rpx 0;
-      padding: 16rpx 80rpx;
-      font-size: 28rpx;
-      align-self: flex-start;
-      background-color: #2fb7ec;
-      color: white;
-      border-radius: 8rpx;
-      box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+      .title {
+        margin-top: 220rpx;
+        font-size: 72rpx;
+      }
+
+      .desc {
+        margin-top: 96rpx;
+        font-size: 40rpx;
+      }
+
+      .query-button {
+        margin: 96rpx 0;
+        font-size: 28rpx;
+        align-self: flex-start;
+      }
     }
   }
 }
+
+.mixin() !important;

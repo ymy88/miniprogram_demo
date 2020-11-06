@@ -1,53 +1,75 @@
-.container {
-  padding: 10rpx;
-  margin: 0;
-
-  .space {
-    margin-top: 80rpx;
-  }
-  .small-space {
-    margin-top: 20rpx;
-  }
-
-  .title {
-    .space();
-    font-size: 72rpx;
-  }
-
-  .content {
-    margin-top: 40rpx;
-    height: 100%;
-    background-color: white;
-    padding: 0 70rpx;
+.mixin() {
+  .root {
+    padding: 10rpx;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-  
+
+    .v-space {
+      margin-top: 80rpx;
+    }
+
+    .title {
+      .v-space();
+      font-size: 72rpx;
+    }
+
+    .card {
+      height: 100%;
+      background-color: white;
+      padding: 40rpx 70rpx;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      box-shadow: 0 3px 1px -2px rgba(0,0,0,.01), 0 2px 2px 0 rgba(0,0,0,.04), 0 1px 5px 0 rgba(0,0,0,.02);
+    }
+    
     .desc {
-      .space();
+      .v-space();
       font-size: 40rpx;
     }
 
     .textarea {
-      .space();
+      .v-space();
       padding: 16rpx;
       background-color: #192a320d;
     }
 
-    .flex-left {
-      align-self: flex-start;
+    .button-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: space-between;
+      .v-space();
+
+      .action-btn {
+        width: 300rpx;
+      }
     }
 
-    .btn-query {
-      .flex-left();
-      .space();
-    }
+    .tracking-block {
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+      align-items: strecth;
 
-    .btn-clear {
-      .flex-left();
-      .small-space();
+      .tracking-number-bar {
+        font-size: 24rpx;
+        padding: 16rpx;
+        font-weight: bold;
+        background-color: aqua;
+      }
+
+      .tracking-location-bar {
+        height: 80rpx;
+        font-size: 24rpx;
+        padding: 16rpx;
+      }
     }
-  
   }
 }
+
+.mixin() !important;
