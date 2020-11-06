@@ -20,14 +20,15 @@
   <view wx:if="{{ trackingInfo && trackingInfo.length > 0 }}" class="content">
     <text class="desc">以下是mock数据，不要在意细节</text>
     <view class="tracking-block">
-      <block wx:for="{{ trackingInfo }}" wx:key="trackingNumber">
+      <view class="card-no-padding v-space" wx:for="{{ trackingInfo }}" wx:key="trackingNumber">
         <view class="tracking-number-bar">
           {{ item.trackingNumber }}
         </view>
         <view class="tracking-location-bar">
-          {{ item.currentLocation }}
+          <text>现位于：</text>
+          <text>{{ item.currentLocation }}</text>
         </view>
-      </block>
+      </view>
     </view>
   </view>
 
