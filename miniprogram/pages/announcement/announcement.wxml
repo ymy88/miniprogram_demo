@@ -1,0 +1,8 @@
+<view class="root">
+  <text class="title">公告</text>
+  <announcement-card class="v-space card" wx:for="{{ announcements }}" wx:key="id">
+    <text slot="title">{{ item.title }}</text>
+    <text slot="date">{{ item.publish_time }}</text>
+    <rich-text slot="text" nodes="{{ item.text }}"></rich-text>
+  </announcement-card>
+</view>

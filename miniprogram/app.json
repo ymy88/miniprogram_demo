@@ -1,7 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/my-profile/my-profile"
+    "pages/announcement/announcement",
+    "pages/my-profile/my-profile",
+    "pages/login/login",
+    "pages/query-tracking/query-tracking"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,16 +19,25 @@
     "weui": true
   },
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "images/homepage.png",
-      "selectedIconPath": "images/homepage-selected.png"
-    }, {
-      "pagePath": "pages/my-profile/my-profile",
-      "text": "我",
-      "iconPath": "images/profile.png",
-      "selectedIconPath": "images/profile-selected.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/homepage.png",
+        "selectedIconPath": "images/homepage-selected.png"
+      },
+      {
+        "pagePath": "pages/announcement/announcement",
+        "text": "公告",
+        "iconPath": "images/announcement.png",
+        "selectedIconPath": "images/announcement-selected.png"
+      },
+      {
+        "pagePath": "pages/my-profile/my-profile",
+        "text": "我",
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile-selected.png"
+      }
+    ]
   }
 }
